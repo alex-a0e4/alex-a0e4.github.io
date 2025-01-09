@@ -1,1 +1,857 @@
+/* Добавляем стили для кнопки PDF в начало файла */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.884);
+  position: relative; /* Добавляем для абсолютного позиционирования кнопки */
+}
 
+/* Обновленные стили для кнопки PDF */
+.download-pdf {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 16px;
+  background-color: #414141;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Добавляем z-index чтобы кнопка была поверх других элементов */
+  text-decoration: none;
+}
+
+.download-pdf:hover {
+  background-color: #0464f3;
+}
+
+.pdf-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Обновляем медиа-запрос для мобильных устройств */
+@media screen and (max-width: 992px) {
+  .header-container {
+    padding-top: 60px; /* Добавляем отступ сверху для кнопки */
+  }
+
+  .download-pdf {
+    top: 149px;
+    right: 50%;
+    height: 16px;
+    transform: translateX(50%);
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header-container {
+    padding-top: 60px; /* Добавляем отступ сверху для кнопки */
+  }
+
+  .pdf-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .text-pdf {
+    margin-right: 2px;
+  }
+
+  .download-pdf {
+    font-size: 14px;
+    top: 123px;
+    right: 50%;
+    transform: translateX(50%);
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .header-container {
+    padding-top: 60px; /* Добавляем отступ сверху для кнопки */
+  }
+
+  .pdf-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .text-pdf {
+    margin-right: 2px;
+  }
+
+  .download-pdf {
+    font-size: 12px;
+    top: 120px;
+    right: 50%;
+    transform: translateX(50%);
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .header-container {
+    padding-top: 60px; /* Добавляем отступ сверху для кнопки */
+  }
+
+  .pdf-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .text-pdf {
+    margin-right: 2px;
+  }
+
+  .download-pdf {
+    font-size: 10px;
+    top: 114px;
+    right: 50%;
+    transform: translateX(50%);
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #414141;
+  background-color: #e5e5e5;
+  padding: 40px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* header */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+.border-line-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.border-line {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: hsla(0, 0%, 29%, 0.87);
+}
+
+.about-me-container {
+  display: inline-block;
+  width: 900px;
+  height: 200px;
+  margin-left: 40px;
+  margin-top: 60px;
+  color: #ffffff;
+}
+
+.my-name {
+  display: inline-block;
+  color: rgb(233, 232, 232);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 55px;
+  margin: 0 0 8px 0;
+  border-bottom: 3px solid hsl(0, 0%, 55%);
+  padding-bottom: 8px;
+}
+
+.my-target {
+  display: inline-block;
+  color: darkgrey;
+  font-weight: 150;
+  font-size: 38px;
+  line-height: 55px;
+  margin: 0 0 16px 0;
+}
+
+/* contacts */
+.contacts-container {
+  display: inline-block;
+  width: 215.55px;
+  height: 150px;
+  margin-left: 170px;
+  margin-top: 80px;
+  margin-right: 8px;
+}
+
+.phone-number-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 86px;
+}
+
+.mail-adress-container {
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+}
+
+.location-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 42px;
+  margin-top: 36px;
+}
+
+.images-header-container {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin-top: 78px;
+  margin-right: 40px;
+}
+
+.img-phone {
+  display: inline-block;
+  margin-top: -1px;
+}
+
+.img-mail {
+  display: inline-block;
+  height: 21px;
+  margin-top: 20px;
+}
+
+.img-geo {
+  display: inline-block;
+  height: 32px;
+  margin-top: 20px;
+}
+
+/* Links */
+.off-line-phone {
+  color: darkgrey;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.off-line-phone:hover {
+  color: #0464f3;
+  text-decoration: none;
+}
+
+.off-line-mail {
+  color: darkgrey;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.off-line-mail:hover {
+  color: #0464f3;
+  text-decoration: none;
+}
+
+.off-line-geo {
+  color: darkgrey;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.off-line-geo:hover {
+  color: #0464f3;
+  text-decoration: none;
+}
+
+/* summary */
+.summary {
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+.summary-header {
+  color: #414141;
+  font-weight: normal;
+  font-size: 32px;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  width: 500px;
+  border-bottom: 2px solid #7f7f7f;
+}
+
+/* main_content */
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side {
+  order: 1;
+}
+
+.separating-line-container {
+  order: 2; /* Добавляем этот стиль */
+}
+
+.right-side {
+  order: 3; /* Меняем с 2 на 3 */
+}
+
+/* left side of maincontent */
+.left-side {
+  display: inline-block;
+  width: 400px;
+  margin-top: 0px;
+  margin-left: 40px;
+}
+
+/* Стили для всех списков */
+.list-item > h4 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.list-item > p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.list-item > ul {
+  margin-top: 0px;
+}
+
+.company > h4 {
+  margin-bottom: 0px;
+}
+
+.certification-list-item {
+  margin: 10px 0 0 0;
+}
+
+.certification-list-item-p {
+  margin: 0 0 10px 0;
+}
+
+/* additional-inf*/
+.additional-container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.additional-intem > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* separating-line */
+.separating-line-container {
+  display: inline-block;
+  width: 40px;
+  margin-left: 40px;
+  margin-right: 0px;
+}
+
+.separating-line {
+  position: relative;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #7f7f7f;
+}
+
+/* right side of maincontent */
+.right-side {
+  display: inline-block;
+  width: 800px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.education > h4 {
+  margin-top: 10px;
+}
+
+.education > p {
+  margin-top: -20px;
+}
+
+.language-item1 > p {
+  margin: 0;
+}
+
+/* Images positioning */
+.img-skill,
+.img-certification,
+.img-additional,
+.img-achievements,
+.img-experiense,
+.img-education,
+.img-language {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: -4px;
+}
+
+/* Underline styles */
+.underline-skills,
+.underline-certification,
+.underline-additional,
+.underline-achievements,
+.underline-experiense,
+.underline-education,
+.underline-language {
+  border-bottom: 2px solid #7f7f7f;
+}
+
+.underline-skills {
+  width: 156px;
+}
+.underline-certification {
+  width: 188px;
+}
+.underline-additional {
+  width: 302px;
+}
+.underline-achievements {
+  width: 252px;
+}
+.underline-experiense {
+  width: 240px;
+}
+.underline-education {
+  width: 160px;
+}
+.underline-language {
+  width: 164px;
+}
+
+.underline-skills > h3,
+.underline-certification > h3,
+.underline-additional > h3,
+.underline-achievements > h3,
+.underline-experiense > h3,
+.underline-education > h3,
+.underline-language > h3 {
+  color: #414141;
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 0;
+  margin-left: 36px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1056px) {
+  .my-target {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* Header */
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 0px 0px;
+  }
+
+  .about-me-container {
+    width: auto;
+    height: auto;
+    margin: 20px 20px 10px 20px;
+    text-align: center;
+  }
+
+  .my-name {
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    display: block;
+  }
+
+  .my-target {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+  }
+
+  /* Contacts */
+  .contacts-container {
+    width: 100%;
+    height: auto;
+    margin: 40px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-number-container,
+  .mail-adress-container,
+  .location-container {
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    text-align: center;
+    position: static;
+  }
+
+  .images-header-container {
+    display: none;
+  }
+
+   /* Main content */
+   .main {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: auto;
+    margin: 20px 40px;
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .separating-line-container {
+    display: none; /* На мобильных продолжаем скрывать */
+  }
+
+  .right-side {
+    order: 1;
+  }
+
+
+  /* Headers */
+  .underline-skills,
+  .underline-certification,
+  .underline-additional,
+  .underline-achievements,
+  .underline-experiense,
+  .underline-education,
+  .underline-language {
+    width: auto;
+    max-width: 300px;
+  }
+
+  /* Summary */
+  .summary {
+    padding: 0 20px;
+  }
+
+  .summary-header {
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .summary-header {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .education > h4 {
+    font-size: 16px;
+  }
+
+  .education > p {
+    font-size: 14px;
+  }
+
+  .underline-skills > h3,
+  .underline-certification > h3,
+  .underline-additional > h3,
+  .underline-achievements > h3,
+  .underline-experiense > h3,
+  .underline-education > h3,
+  .underline-language > h3 {
+    font-size: 20px;
+  }
+
+  /* Images positioning */
+  .img-skill,
+  .img-certification,
+  .img-additional,
+  .img-achievements,
+  .img-experiense,
+  .img-education,
+  .img-language {
+    position: absolute;
+    margin-top: -4px;
+    margin-left: -4px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .header-container {
+    padding: 15px 0 0px;
+  }
+
+  .about-me-container {
+    margin: 10px;
+  }
+
+  .my-name {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .my-target {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contacts-container {
+    margin: 30px 0 10px;
+  }
+
+  .phone-number-container,
+  .mail-adress-container,
+  .location-container {
+    margin: 3px 0;
+  }
+
+  .tel-text,
+  .mail-text-color,
+  .geo-text-color {
+    font-size: 16px;
+  }
+
+  .left-side,
+  .right-side {
+    margin: 10px;
+  }
+
+  .company > h4 {
+    font-size: 16px;
+  }
+
+  .list-item > p {
+    font-size: 14px;
+  }
+  .summary-header {
+    font-size: 24px ;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .header-container {
+    padding: 15px 0 0px;
+  }
+
+  .about-me-container {
+    margin: 10px;
+  }
+
+  .my-name {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .my-target {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contacts-container {
+    margin: 30px 0 10px;
+  }
+
+  .phone-number-container,
+  .mail-adress-container,
+  .location-container {
+    margin: 3px 0;
+  }
+
+  .tel-text,
+  .mail-text-color,
+  .geo-text-color {
+    font-size: 16px;
+  }
+
+  .left-side,
+  .right-side {
+    margin: 10px;
+  }
+
+  .company > h4 {
+    font-size: 16px;
+  }
+
+  .list-item > p {
+    font-size: 14px;
+  }
+  .summary-header {
+    font-size: 22px ;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .header-container {
+    padding: 15px 0 0px;
+  }
+
+  .about-me-container {
+    margin: 10px;
+  }
+
+  .my-name {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .my-target {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contacts-container {
+    margin: 30px 0 10px;
+  }
+
+  .phone-number-container,
+  .mail-adress-container,
+  .location-container {
+    margin: 3px 0;
+  }
+
+  .tel-text,
+  .mail-text-color,
+  .geo-text-color {
+    font-size: 16px;
+  }
+
+  .left-side,
+  .right-side {
+    margin: 10px;
+  }
+
+  .company > h4 {
+    font-size: 16px;
+  }
+
+  .list-item > p {
+    font-size: 14px;
+  }
+  .summary-header {
+    font-size: 20px ;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .header-container {
+    padding: 15px 0 0px;
+  }
+
+  .about-me-container {
+    margin: 10px;
+  }
+
+  .my-name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .my-target {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contacts-container {
+    margin: 30px 0 10px;
+  }
+
+  .phone-number-container,
+  .mail-adress-container,
+  .location-container {
+    margin: 3px 0;
+  }
+
+  .tel-text,
+  .mail-text-color,
+  .geo-text-color {
+    font-size: 14px;
+  }
+
+  .left-side,
+  .right-side {
+    margin: 10px;
+  }
+
+  .company > h4 {
+    font-size: 16px;
+  }
+
+  .list-item > p {
+    font-size: 14px;
+  }
+  .summary-header {
+    font-size: 20px ;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+
+  .wrapper {
+    box-shadow: none;
+    /* width: 100%; */
+  }
+}
